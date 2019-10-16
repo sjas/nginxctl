@@ -1,13 +1,13 @@
 # nginxctl
-apachectl, but for nginx
 
-Original from https://github.com/rackerlabs/nginxctl but that repo is rather dead.
+`apachectl`, but for nginx.
 
-Patched to work with python3 and to omit color output when used in shell pipes. ( https://github.com/rackerlabs/nginxctl/pull/9/commits/dda07fae58c8cc0ebb8602299b37af8895ffd981 )
+Original from https://github.com/rackerlabs/nginxctl - sadly that repo is rather dead.
 
-Patched to work properly with ipv6 addresses, so these cases work, too:
-- lowercase [a-f] / uppercase [A-F] lettering
-- standard / compressed notation (the latter containing '::')
+- patched to work with python3
+- FWIW python2 should still work
+- omits colored output when used in shell pipes. ( https://github.com/rackerlabs/nginxctl/pull/9/commits/dda07fae58c8cc0ebb8602299b37af8895ffd981 )
+- patched to work properly with ipv6 addresses (**[A-F]** vs. **[a-f]** if need be, existence of double colons)
 
 Known Bugs:
 - seems to not handle *server* statements missing a **listen** directive
